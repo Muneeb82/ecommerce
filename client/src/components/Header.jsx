@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -11,7 +11,7 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-} from '@headlessui/react'
+} from "@headlessui/react";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -20,23 +20,57 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+  UserIcon,
+  HeartIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
+import SearchBar from "./SearchBar";
+import logo from "../assets/logo.png";
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+  {
+    name: "Analytics",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Engagement",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Security",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Integrations",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Automations",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
@@ -44,38 +78,101 @@ export default function Header() {
         <div className="px-36 py-0">
           <div className="flex flex-wrap">
             <div className="grow shrink-0 basis-0">
-            <div>
-              <ul className="flex items-center justify-between">
-                <li>
-                  <div>
-                    <p className="text-[#696969] text-base font-medium leading-none">Delivery on next day from 10:00 am to 09:00 pm</p>
-                  </div>
-                </li>
-                <li className="text-center">
-                  <div className="flex text-center justify-center">
-                    <div className="icon"><PhoneIcon /></div>
-                    <p className="text-[#696969] text-base font-medium leading-none">Need help</p>
-                    <a href="tel:+01 888 999 7766" title="tel:+01 888 999 7766">
-                      <strong>tel:+01 888 999 7766</strong>
-                    </a>
-                  </div>
-                </li>
-                <li className="text-right">
-                  <div>
-                    <p className="text-[#696969] text-base font-medium leading-none">
-                      <a href="/" title="Keep in Touch">Contact</a>
-                      <a href="/" title="Organic">Blog</a>
-                      <a href="/" title="/account">Order Tracking</a>
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+              <div>
+                <ul className="flex items-center justify-between">
+                  <li>
+                    <div>
+                      <p className="text-[#696969] text-base font-medium leading-none">
+                        Delivery on next day from 10:00 am to 09:00 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li className="text-center">
+                    <div className="flex text-center justify-center">
+                      <div className="icon">
+                        <PhoneIcon />
+                      </div>
+                      <p className="text-[#696969] text-base font-medium leading-none">
+                        Need help
+                      </p>
+                      <a
+                        href="tel:+01 888 999 7766"
+                        title="tel:+01 888 999 7766"
+                      >
+                        <strong>tel:+01 888 999 7766</strong>
+                      </a>
+                    </div>
+                  </li>
+                  <li className="text-right">
+                    <div>
+                      <p className="text-[#696969] text-base font-medium leading-none">
+                        <a href="/" title="Keep in Touch">
+                          Contact
+                        </a>
+                        <a href="/" title="Organic">
+                          Blog
+                        </a>
+                        <a href="/" title="/account">
+                          Order Tracking
+                        </a>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <div className="relative bg-white">
+        <div className="px-8">
+          <div className="flex flex-wrap">
+            <div className="grow shrink-0 basis-0">
+              <div className="flex items-center justify-between flex-wrap py-5">
+                <div className="w-[33.33%]">
+                  <SearchBar />
+                </div>
+                <div className="w-[33.33%] order-[-1]">
+                  <a href="#" className="block max-w-[160px]">
+                    <img src={logo} alt="logo" />
+                  </a>
+                </div>
+                <div className="w-[33.33%] flex justify-end">
+                 <ul className="flex items-center justify-end w-[100%]">
+                  <li className="block relative px-[7px] leading-none">
+                    <a href="/account" className="text-[#2a0808] flex items-center justify-center relative">
+                    <span className="relative size-5 h-14 w-14 flex items-center justify-center border border-solid border-[#2222221a] rounded-[50%] bg-[#f1f1f1]">
+                      <UserIcon className="size-5 not-italic normal leading-none" />
+                    </span>
+                    </a>
+                  </li>
+                  <li className="block relative px-[7px] leading-none">
+                    <a href="/account" className="text-[#2a0808] flex items-center justify-center relative">
+                    <span className="relative size-5 h-14 w-14 flex items-center justify-center border border-solid border-[#2222221a] rounded-[50%] bg-[#f1f1f1]">
+                      <HeartIcon className="size-5 not-italic normal leading-none" />
+                      <span className="size-3.5 text-white rounded-[50px] h-[25px] w-[25px] absolute top-[-5px] right-[-5px] m-0 flex bg-[#ff8a5c] items-center justify-center">0</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li className="block relative px-[7px] leading-none">
+                    <a href="/account" className="text-[#2a0808] flex items-center justify-center relative">
+                    <span className="relative size-5 h-14 w-14 flex items-center justify-center border border-solid border-[#2222221a] rounded-[50%] bg-[#f1f1f1]">
+                      <ShoppingCartIcon className="size-5 not-italic normal leading-none" />
+                      <span className="size-3.5 text-white rounded-[50px] h-[25px] w-[25px] absolute top-[-5px] right-[-5px] m-0 flex bg-[#ff8a5c] items-center justify-center">0</span>
+                    </span>
+                    </a>
+                  </li>
+                 </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -100,7 +197,10 @@ export default function Header() {
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
               Product
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="size-5 flex-none text-gray-400"
+              />
             </PopoverButton>
 
             <PopoverPanel
@@ -114,10 +214,16 @@ export default function Header() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
+                      <item.icon
+                        aria-hidden="true"
+                        className="size-6 text-gray-600 group-hover:text-indigo-600"
+                      />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -133,7 +239,10 @@ export default function Header() {
                     href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
                   >
-                    <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
+                    <item.icon
+                      aria-hidden="true"
+                      className="size-5 flex-none text-gray-400"
+                    />
                     {item.name}
                   </a>
                 ))}
@@ -157,7 +266,11 @@ export default function Header() {
           </a>
         </div>
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -184,7 +297,10 @@ export default function Header() {
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                     Product
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="size-5 flex-none group-data-open:rotate-180"
+                    />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...products, ...callsToAction].map((item) => (
@@ -231,5 +347,5 @@ export default function Header() {
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }
