@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import "tailwindcss"; 
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
 @import "tailwindcss"; 
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 
 body {
   @apply font-sans;
   font-family: 'Sen', sans-serif;
+<<<<<<< HEAD
 }
 >>>>>>> 78cea10 (Night commit)
+=======
+}
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32

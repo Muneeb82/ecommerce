@@ -1,16 +1,16 @@
-<<<<<<< HEAD
-export default function HomePage() {
-  return (
-    <div className="p-6 text-center">
-      <h1 className="text-2xl font-bold">Welcome to MERN eCommerce</h1>
-    </div>
-=======
 import SwiperSlider from "../components/Slider";
 import {ShoppingBagIcon} from "@heroicons/react/24/outline";
 import sliderBg from '../assets/slider-bg.png'; 
 import banner1 from '../assets/banner-1.jpg';
 import CategorySlider from "../components/Categories";
 import Products from "../components/Products";
+import CategoryOffer from "../components/CategoriesOffer";
+import BannerGrid from "../components/Banner";
+import SaleOfTheMonthBanner from "../components/SaleTimer";
+import BannerGridSection from "../components/BannerGrid";
+import BrandLogoSwiper from "../components/BrandLogo";
+import ServiceSection from "../components/Service";
+import NewsletterSection from "../components/Newsletter";
 
 export default function HomePage() {
   return (
@@ -64,7 +64,41 @@ export default function HomePage() {
     <div className="block">
       <Products />
     </div>
+
+    {/* Categories Offer */}
+    <div className="block">
+      <CategoryOffer />
+    </div>
+
+    {/* Banner Grid */}
+    <div className="block">
+      <BannerGrid/>
+    </div>
+
+    {/* Sale Timer */}
+    <div className="block">
+      <SaleOfTheMonthBanner/>
+    </div>
+
+    {/* Banner Grid */}
+    <div className="block">
+      <BannerGridSection />
+    </div>
+
+    {/* Brand Logo */}
+    <div className="block">
+      <BrandLogoSwiper />
+    </div>
+
+    {/* Service */}
+    <div className="block">
+      <ServiceSection />
+    </div>
+
+    {/* Newsletter */}
+    <div className="block">
+      <NewsletterSection />
+    </div>
     </>
->>>>>>> 78cea10 (Night commit)
   );
 }

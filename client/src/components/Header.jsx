@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 
 import { useState } from 'react'
@@ -7,6 +8,11 @@ import { useState } from 'react'
 
 import { useState } from "react";
 >>>>>>> 78cea10 (Night commit)
+=======
+"use client";
+
+import { useState } from "react";
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
 import {
   Dialog,
   DialogPanel,
@@ -18,10 +24,14 @@ import {
   PopoverGroup,
   PopoverPanel,
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from '@headlessui/react'
 =======
 } from "@headlessui/react";
 >>>>>>> 78cea10 (Night commit)
+=======
+} from "@headlessui/react";
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -31,22 +41,62 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+=======
+  UserIcon,
+  HeartIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
+import SearchBar from "./SearchBar";
+import logo from "../assets/logo.png";
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+  {
+    name: "Analytics",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Engagement",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Security",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Integrations",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Automations",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 
 export default function Header() {
+<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 =======
   UserIcon,
@@ -101,6 +151,9 @@ const callsToAction = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 >>>>>>> 78cea10 (Night commit)
+=======
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
 
   return (
     <header className="bg-white">
@@ -108,6 +161,7 @@ export default function Header() {
         <div className="px-36 py-0">
           <div className="flex flex-wrap">
             <div className="grow shrink-0 basis-0">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div>
               <ul className="flex items-center justify-between">
@@ -137,6 +191,8 @@ export default function Header() {
               </ul>
             </div>
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
               <div>
                 <ul className="flex items-center justify-between">
                   <li>
@@ -179,14 +235,20 @@ export default function Header() {
                   </li>
                 </ul>
               </div>
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
             </div>
           </div>
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
       <div className="relative bg-white">
         <div className="px-8">
           <div className="flex flex-wrap">
@@ -236,7 +298,10 @@ export default function Header() {
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -262,13 +327,19 @@ export default function Header() {
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
               Product
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
               <ChevronDownIcon
                 aria-hidden="true"
                 className="size-5 flex-none text-gray-400"
               />
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
             </PopoverButton>
 
             <PopoverPanel
@@ -283,6 +354,7 @@ export default function Header() {
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
@@ -294,11 +366,22 @@ export default function Header() {
                       />
                     </div>
                     <div className="flex-auto">
+=======
+                      <item.icon
+                        aria-hidden="true"
+                        className="size-6 text-gray-600 group-hover:text-indigo-600"
+                      />
+                    </div>
+                    <div className="flex-auto">
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
                       <a
                         href={item.href}
                         className="block font-semibold text-gray-900"
                       >
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -315,13 +398,19 @@ export default function Header() {
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
                     <item.icon
                       aria-hidden="true"
                       className="size-5 flex-none text-gray-400"
                     />
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
                     {item.name}
                   </a>
                 ))}
@@ -346,14 +435,20 @@ export default function Header() {
         </div>
       </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -381,13 +476,19 @@ export default function Header() {
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                     Product
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
 =======
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
                     <ChevronDownIcon
                       aria-hidden="true"
                       className="size-5 flex-none group-data-open:rotate-180"
                     />
+<<<<<<< HEAD
 >>>>>>> 78cea10 (Night commit)
+=======
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...products, ...callsToAction].map((item) => (
@@ -435,8 +536,12 @@ export default function Header() {
       </Dialog>
     </header>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
   );
 >>>>>>> 78cea10 (Night commit)
+=======
+  );
+>>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
 }
