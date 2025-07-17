@@ -18,17 +18,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
+    "swiper": "^11.2.10",
     "react-router-dom": "^7.6.3"
-=======
-    "react-router-dom": "^7.6.3",
-    "swiper": "^11.2.10"
->>>>>>> 78cea10 (Night commit)
-=======
-    "react-router-dom": "^7.6.3",
-    "swiper": "^11.2.10"
->>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

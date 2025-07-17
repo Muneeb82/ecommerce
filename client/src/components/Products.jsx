@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import titleIcon from '../assets/title-icon2.png';
-
-export default function Products() {
-  return (
-    <div className="relative overflow-hidden pt-20 pb-20">
-        <div className="px-[150px]">
-            <div className="flex flex-wrap">
-                <div className="grow shrink-0 basis-0">
-                    <div className="flex items-center justify-between text-start mb-10">
-                        <div className="flex items-center">
-                            <h2>Top selling products</h2>
-                            <p className="max-w-full ml-[30px] size-[18px] leading-none font-light">
-                                <span className="inline-block mr-[30px] max-w-[50px]">
-                                    <img src={titleIcon} alt="title-icon" />
-                                </span>
-                                Fresh and fabulous from farm to table!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  );
-}
-=======
 import React from 'react';
 import titleIcon from '../assets/title-icon2.png';
 
@@ -88,13 +61,15 @@ const Products = () => {
   };
 
   return (
-    <div className="pt-20 pb-20 px-[150px]">
-      <div className="mb-10 flex items-center justify-between">
-        <h2 className="text-2xl font-bold">Top Selling Products</h2>
-        <p className="flex items-center text-sm text-gray-600">
-          <img src={titleIcon} alt="icon" className="w-6 mr-2" />
-          Fresh and fabulous from farm to table!
-        </p>
+    <div className="pt-20 pb-20 px-[150px] relative overflow-hidden">
+      <div className="mb-10 flex items-center justify-between text-start flex-wrap">
+        <div className="flex items-center">
+          <h2 className="text-2xl font-bold">Top Selling Products</h2>
+          <p className="flex items-center text-sm text-gray-600 ml-[30px]">
+            <img src={titleIcon} alt="title-icon" className="w-6 mr-2" />
+            Fresh and fabulous from farm to table!
+          </p>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -118,7 +93,7 @@ const Products = () => {
 
             <select className="w-full mt-3 p-2 border rounded text-sm">
               {product.variants.map((v) => (
-                <option key={v.id} disabled={v.available === false}>
+                <option key={v.id} disabled={!v.available}>
                   {v.size} {v.available === false && ' - Sold out'}
                 </option>
               ))}
@@ -150,4 +125,3 @@ const Products = () => {
 };
 
 export default Products;
->>>>>>> 57c1b335a25ddfbc0cb2a603c986587478281a32
